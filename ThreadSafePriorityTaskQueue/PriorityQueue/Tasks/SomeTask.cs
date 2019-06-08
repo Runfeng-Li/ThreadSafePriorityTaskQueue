@@ -2,7 +2,7 @@
 
 namespace ThreadSafePriorityTaskQueue.PriorityQueue.Tasks
 {
-    public class SomeTask : ITask
+    public class SimpleTask : ITask
     {
         public Guid Id { get; } = Guid.NewGuid();
         public TaskPriority Priority { get; set; }

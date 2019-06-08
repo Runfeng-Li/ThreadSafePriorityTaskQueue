@@ -3,9 +3,9 @@ using ThreadSafePriorityTaskQueue.PriorityQueue.Tasks;
 
 namespace ThreadSafePriorityTaskQueue.PriorityQueue.Comparers
 {
-    public class ImpactBasedPriorityComparer : IComparer<SomeTask>
+    public class ImpactBasedPriorityComparer : IComparer<SimpleTask>
     {
-        public int Compare(SomeTask x, SomeTask y)
+        public int Compare(SimpleTask x, SimpleTask y)
         {
             if (x.Priority.ImpactLevel.CompareTo(y.Priority.ImpactLevel) != 0)
             {

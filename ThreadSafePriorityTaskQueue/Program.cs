@@ -10,11 +10,11 @@ namespace ThreadSafePriorityTaskQueue
     {
         public static void Main(string[] args)
         {
-            var queue = new ThreadSafePriorityQueue<SomeTask>(new ImpactBasedPriorityComparer());
+            var queue = new ThreadSafePriorityQueue<SimpleTask>(new ImpactBasedPriorityComparer());
 
-            var listOfTasks = new List<SomeTask>(6)
+            var listOfTasks = new List<SimpleTask>(6)
             {
-                new SomeTask()
+                new SimpleTask()
                 {
                     Priority = new TaskPriority()
                     {
@@ -23,7 +23,7 @@ namespace ThreadSafePriorityTaskQueue
                         Deadline = DateTime.UtcNow
                     }
                 },
-                new SomeTask()
+                new SimpleTask()
                 {
                     Priority = new TaskPriority()
                     {
@@ -32,7 +32,7 @@ namespace ThreadSafePriorityTaskQueue
                         Deadline = DateTime.UtcNow
                     }
                 },
-                new SomeTask()
+                new SimpleTask()
                 {
                     Priority = new TaskPriority()
                     {
@@ -41,7 +41,7 @@ namespace ThreadSafePriorityTaskQueue
                         Deadline = DateTime.MaxValue
                     }
                 },
-                new SomeTask()
+                new SimpleTask()
                 {
                     Priority = new TaskPriority()
                     {
@@ -50,7 +50,7 @@ namespace ThreadSafePriorityTaskQueue
                         Deadline = DateTime.MaxValue
                     }
                 }
-                ,new SomeTask()
+                ,new SimpleTask()
                 {
                     Priority = new TaskPriority()
                     {
@@ -59,7 +59,7 @@ namespace ThreadSafePriorityTaskQueue
                         Deadline = DateTime.UtcNow
                     }
                 }
-                ,new SomeTask()
+                ,new SimpleTask()
                 {
                     Priority = new TaskPriority()
                     {
